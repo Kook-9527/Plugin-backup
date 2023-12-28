@@ -1,0 +1,10 @@
+#!name=万源阅读
+#!desc=解锁会员高级功能+过滤所有广告（注：开启后会影响AppleID登录问题,如需要切换账号请临时关闭该插件）
+#!author= ios151
+#!icon = https://raw.githubusercontent.com/Kook-9527/icon/main/logo/wyyd.jpg
+
+[Script]
+http-response ^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/wanyuanyuedu.js, requires-body=true, timeout=60 ,tag=wanyuanyuedu
+
+[MITM]
+hostname = buy.itunes.apple.com
