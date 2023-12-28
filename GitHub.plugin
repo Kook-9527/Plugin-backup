@@ -1,0 +1,11 @@
+#!name=GitHub
+#!desc=解锁pro（注：除了Ai功能，其他功能都可用）
+#!author= ios151
+#!icon = https://raw.githubusercontent.com/Kook-9527/icon/main/logo/GitHub.png
+
+
+[MITM]
+hostname = api.github.com
+
+[Script]
+http-response ^https:\/\/api\.github\.com\/graphql requires-body=1,script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/Github.js, requires-body=true, timeout=60 ,tag=GitHub
