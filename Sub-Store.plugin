@@ -1,5 +1,5 @@
 #!name = Sub-Store
-#!desc = 高级订阅管理工具，使用前请在本插件的详情页面为[PROXY]项分配代理策略（去掉定时同步Gist）
+#!desc = 高级订阅管理工具（去掉定时同步Gist），使用前请在本插件的详情页面为[PROXY]项分配代理策略。
 #!openUrl = https://sub.store
 #!author = Peng-YM
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Sub-Store.plugin
