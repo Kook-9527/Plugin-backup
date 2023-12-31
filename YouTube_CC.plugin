@@ -1,5 +1,9 @@
 #!name=Youtube_CC
 #!desc=无中文字幕机翻方案
+#!author = id77 
+#!homepage = https://github.com/id77
+#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/YouTube.png
+
 
 [MITM]
 hostname = www.youtube.com
