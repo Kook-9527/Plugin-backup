@@ -1,0 +1,2 @@
+# > 没有包含在分流规则里面的网站/域名
+DOMAIN-KEYWORD,.cn,DIRECT
