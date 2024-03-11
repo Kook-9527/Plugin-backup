@@ -2,7 +2,6 @@
 #!desc=此分流需匹配REJECT策略
 #!icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_Update.png
 
-
 DOMAIN,mesu.apple.com,REJECT
 DOMAIN,gdmf.apple.com,REJECT
 DOMAIN,updates-http.cdn-apple.com,REJECT
