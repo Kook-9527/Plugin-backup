@@ -1,0 +1,161 @@
+#======================================================================================
+#======================================================================================
+# @Kook-9527         APP/PC 通用Clash.Meta配置文件  
+# @ClashDownload     https://github.com/clash-verge-rev/clash-verge-rev/releases
+# @Thanks            @ddgksf2013, @blackmatrix7, @Anti
+#======================================================================================
+#======================================================================================
+
+
+port: 9658           # HTTP 代理端口
+socks-port: 9547     # Socks 端口
+redir-port: 4525     # Redir 端口
+mixed-port: 3650     # 混合端口
+allow-lan: true      # 允许局域网连接
+bind-address: "*"    # 地址绑定
+mode: rule           # 规则模式
+log-level: info      # 日志级别
+ipv6: true           # IPV6开关
+external-controller: 127.0.0.1:9090
+
+dns:
+  enable: true       # 不使用系统 DNS
+  #ipv6: false        # 关闭 IPV6
+  ipv6: true         # 开启 IPV6
+  listen: 0.0.0.0:53 # dns 监听
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - "*.lan"
+    - localhost.ptlogin2.qq.com
+    - +.srv.nintendo.net
+    - +.stun.playstation.net
+    - +.msftconnecttest.com
+    - +.msftncsi.com
+    - +.xboxlive.com
+    - msftconnecttest.com
+    - xbox.*.microsoft.com
+    - "*.battlenet.com.cn"
+    - "*.battlenet.com"
+    - "*.blzstatic.cn"
+    - "*.battle.net"
+  nameserver:        # 默认 DNS 服务
+    - 223.5.5.5
+    - 223.6.6.6
+    - 119.29.29.29
+    - 180.76.76.76
+    - 114.114.114.114
+    - 8.8.8.8
+    - 1.1.1.1
+    - 1.0.0.1
+  fallback:          # 国外 DNS 服务器
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+    - https://cloudflare-dns.com/dns-query
+    - https://dns.google/dns-query
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    ipcidr:
+      - 240.0.0.0/4
+
+    
+#======================================================================================    
+# > 锚点
+#======================================================================================  
+# 主策略组 > 选择节点分组
+pr:   &a1   {type: select, proxies: [香港节点, 日本节点, 狮城节点, 台湾节点, 美国节点] }
+# 订阅链接 > 更新时间
+p:    &a2   {type: http, interval: 3600, health-check: {enable: true, url: http://www.apple.com/library/test/success.html, interval: 300} }
+# 负载均衡 > 轮询选择
+apg:  &a3   {type: load-balance, url: http://www.apple.com/library/test/success.html, interval: 300, strategy: round-robin, use: [节点订阅链接] }
+# 自动回退
+fb:   &a4   {type: fallback, url: http://www.apple.com/library/test/success.html, interval: 300, use: [节点订阅链接] }
+# 自动选择
+auto: &a5   {type: url-test, lazy: true, url: http://www.apple.com/library/test/success.html, interval: 300, tolerance: 0, use: [节点订阅链接] }
+# 手动选择
+use:  &a6   {type: select, use: [节点订阅链接] }
+# 分流规则
+c:    &a7   {type: http,     behavior: classical, interval: 3600}
+d:    &a8   {type: http,     behavior: domain,    interval: 3600}
+i:    &a9   {type: http,     behavior: ipcidr,    interval: 3600}
+
+
+#======================================================================================    
+# > 订阅链接
+#====================================================================================== 
+proxy-providers:
+  节点订阅链接:
+    <<: *a2
+    
+    url: https://jichangdingyue.yaml
+    # URL后面填写格式1[单一订阅]: 直接填写你的机场Clash订阅[推荐此种方式，避免订阅泄露]
+    # URL后面填写格式2[多个订阅]：https://api.nexconvert.com/sub?target=clash&url=请手动填入你的订阅(多机场订阅用|分割即可)&emoji=true&list=true&new_name=true&udp=false
+    
+    path: ./proxy_providers/tmp.yaml
+
+
+#======================================================================================    
+# > 策略组
+#======================================================================================  
+# 添加本地节点 
+#  - name: Hysteria2[端口跳跃示例]       # 自定义节点名称
+#    type: hysteria2                    # 节点协议
+#    server: 123.123.123.123            # 服务器本地IP
+#    password: MIMAmima                 # 认证密码
+#    port: 12345                        # 单端口
+#    ports: 12345,20000-30000           # 端口跳跃
+#    hop-interval: 30                   # 端口跳跃间隔时间
+#    up: 300                            # 自定义带宽上传限制，若不写单位，默认为 Mbps
+#    down: 300                          # 自定义带宽下载限制，若不写单位，默认为 Mbps
+#    sni: www.bing.com                  # SNI 域名或自签证书的三方域名
+#    skip-cert-verify: true             # 使用自签证书请保持此处为 true，如为 CA 证书建议修改为 false
+
+
+# 远程订阅节点 
+proxy-groups:
+# 主策略组
+  - {name: 节点选择, <<: *a1, icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png"}
+  
+# 节点分组 > 丨 a3 负载均衡 丨 a4 自动回退 丨 a5 自动选择丨 a6 手动选择丨 proxies: [填本地节点name名称]
+  - {name: 香港节点, <<: *a5, filter: "^(?=.*(港|HK|(?i)Hong))(?!.*(填不想包含的节点)).*",             proxies: [], icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png"}
+  - {name: 日本节点, <<: *a5, filter: "^(?=.*(日|东京|JP|(?i)Japan))(?!.*(填不想包含的节点)).*",       proxies: [], icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png"}
+  - {name: 狮城节点, <<: *a5, filter: "^(?=.*(新|坡|SG|(?i)Singapore))(?!.*(填不想包含的节点)).*",     proxies: [], icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png"}
+  - {name: 台湾节点, <<: *a5, filter: "^(?=.*(台|湾|TW|(?i)Taiwan))(?!.*(填不想包含的节点)).*",        proxies: [], icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png"}
+  - {name: 美国节点, <<: *a5, filter: "^(?=.*(美|US|(?i)States|American))(?!.*(填不想包含的节点)).*",  proxies: [], icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png"}
+
+
+#======================================================================================
+# > 分流规则合集  
+#======================================================================================
+rule-providers:
+  Ad:          {<<: *a8, url: https://anti-ad.net/clash.yaml,                                                                                     path: ./ruleset/anti-ad-clash.yaml}
+  Direct:      {<<: *a8, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Direct/Direct.yaml,                      path: ./ruleset/Direct.yaml       }
+  Lan:         {<<: *a7, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Lan/Lan.yaml,                            path: ./ruleset/Lan.yaml          }
+  Apple:       {<<: *a7, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Apple/Apple_Classical.yaml,              path: ./ruleset/Apple.yaml        }
+  OpenAi:      {<<: *a7, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/OpenAI/OpenAI.yaml,                      path: ./ruleset/OpenAi.yaml       }
+  Microsoft:   {<<: *a7, url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Microsoft/Microsoft.yaml,                path: ./ruleset/Microsoft.yaml    }
+  ChinaIP:     {<<: *a9, url: https://cdn.jsdelivr.net/gh/soffchen/GeoIP2-CN@release/clash-rule-provider.yml,                                     path: ./ruleset/ChinaIP.yaml      }
+
+
+
+#====================================================================================== 
+# > 分流规则  
+#======================================================================================    
+rules:
+  # > 单独分流
+  - DOMAIN-SUFFIX,ip111.cn,DIRECT
+  - DOMAIN-SUFFIX,ip233.cn,DIRECT
+
+  # > 前缀为RULE-SET的是规则集分流
+  - RULE-SET,Ad,REJECT
+  - RULE-SET,Direct,DIRECT
+  - RULE-SET,Lan,DIRECT
+  - RULE-SET,Apple,DIRECT
+  - RULE-SET,OpenAi,节点选择
+  - RULE-SET,Microsoft, DIRECT
+  - RULE-SET,ChinaIP,DIRECT
+
+  # >  没有包含在分流规则里面的网站/域名
+  - GEOIP,CN,DIRECT
+  - MATCH,节点选择
