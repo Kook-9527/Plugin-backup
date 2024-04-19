@@ -59,6 +59,12 @@ dns:
     ipcidr:
       - 240.0.0.0/4
 
+geodata-mode: true        # 开启自定义GeoIP2
+geox-url:                 # GeoIP2数据库链接
+  mmdb: "https://github.com/Masaiki/GeoIP2-CN/raw/release/Country.mmdb"
+geo-auto-update: true     # 开启自动更新GeoIP2
+geo-update-interval: 24   # 更新间隔（单位：小时）
+
     
 #======================================================================================    
 # > 锚点
