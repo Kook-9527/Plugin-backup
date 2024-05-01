@@ -29,7 +29,7 @@ chmod 600 /root/cert/*.pem
 chmod -R 700 /root/cert/
 
 # 设置定时任务
-crontab -l | { cat; echo "17 21 * * * \"~/.acme.sh\"/acme.sh --cron --home \"~/.acme.sh\" > /dev/null"; } | crontab -
+crontab -l | { cat; echo "17 21 * * * \"~/.acme.sh\"/acme.sh --cron > /dev/null"; } | crontab -
 
 # 重启你的服务
 # systemctl restart your_service
