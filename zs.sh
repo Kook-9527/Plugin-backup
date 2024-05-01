@@ -25,6 +25,9 @@ read -p "请输入你的 Cloudflare API: " api_key
 # 赋予证书文件权限
 chmod 600 /root/cert/*.pem
 
+# 赋予证书文件夹权限
+chmod -R 700 /root/cert/
+
 # 设置定时任务
 crontab -l | { cat; echo "17 21 * * * \"~/.acme.sh\"/acme.sh --cron --home \"~/.acme.sh\" > /dev/null"; } | crontab -
 
