@@ -13,8 +13,8 @@ read -p "请输入你的邮箱: " email
 read -p "请输入你的 Cloudflare API: " api_key
 
 # 安装证书
-/root/.acme.sh/acme.sh --issue --dns dns_cf -d $domain -d *.$domain --yes-I-know-dns-manual-mode-enough-go-ahead-please --force --debug 2 \
-  --dnspropagation 60
+/root/.acme.sh/acme.sh --issue --dns dns_cf -d $domain -d *.$domain --yes-I-know-dns-manual-mode-enough-go-ahead-please --force --debug \
+  --dnssleep 60
 
 # 安装证书到指定位置
 /root/.acme.sh/acme.sh --install-cert -d $domain \
