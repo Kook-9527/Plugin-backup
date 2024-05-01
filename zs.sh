@@ -9,8 +9,12 @@ read -p "请输入你的域名: " domain
 # 输入你的邮箱
 read -p "请输入你的邮箱: " email
 
+# 输入你的 Cloudflare API
+read -p "请输入你的 Cloudflare API: " api_key
+
 # 安装证书
-/root/.acme.sh/acme.sh --issue --dns dns_cf -d $domain -d *.$domain --yes-I-know-dns-manual-mode-enough-go-ahead-please --force --debug 2
+/root/.acme.sh/acme.sh --issue --dns dns_cf -d $domain -d *.$domain --yes-I-know-dns-manual-mode-enough-go-ahead-please --force --debug 2 \
+  --dns dns_cf --dnssleep 60 --dnssleep 60 --dnspropagation 60 --log
 
 # 安装证书到指定位置
 /root/.acme.sh/acme.sh --install-cert -d $domain \
