@@ -64,13 +64,13 @@ ssl_cert_issue_CF() {
             mkdir $certPath
         fi
         LOGD "请设置域名:"
-        read -p "输入域名:" CF_Domain
+        read -p "输入域名: " CF_Domain
         LOGD "您设置的域名为:${CF_Domain}"
         LOGD "请设置 API 密钥:"
-        read -p "输入 API 密钥:" CF_GlobalKey
+        read -p "输入 API 密钥: " CF_GlobalKey
         LOGD "您的 API 密钥是:${CF_GlobalKey}"
         LOGD "请设置注册邮箱:"
-        read -p "输入邮箱地址:" CF_AccountEmail
+        read -p "输入邮箱: " CF_AccountEmail
         LOGD "您的注册邮箱是:${CF_AccountEmail}"
         ~/.acme.sh/acme.sh --set-default-ca --server letsencrypt
         if [ $? -ne 0 ]; then
