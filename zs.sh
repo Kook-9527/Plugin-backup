@@ -7,7 +7,7 @@ plain='\033[0m'
 
 #添加一些基本函数
 function LOGD() {
-    echo -e "${yellow}[调试] $* ${plain}"
+    echo -e "${yellow}[提示] $* ${plain}"
 }
 
 function LOGE() {
