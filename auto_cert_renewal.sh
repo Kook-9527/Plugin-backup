@@ -1,5 +1,8 @@
+#!/bin/bash
+
 # 定义证书存储目录
-certs_directory="/root/cert/"
+certs_directory="/etc/letsencrypt/live/"
+certs_backup_directory="/root/cert/"
 
 days_before_expiry=5  # 设置在证书到期前几天触发续签
 
@@ -52,10 +55,14 @@ for cert_dir in $certs_directory*; do
         # 续签证书
         certbot certonly --standalone -d $domain --email your@email.com --agree-tos --no-eff-email --force-renewal
 
+        # 复制证书
+        mkdir -p $certs_backup_directory
+        cp /etc/letsencrypt/live/*/*.pem $certs_backup_directory
+
         # 启动 Nginx
         docker start nginx
 
-        echo "证书已成功续签。"
+        echo "证书已成功续签，并已复制到 $certs_backup_directory 目录。"
     else
         # 若未满足续签条件，则输出证书仍然有效
         echo "证书仍然有效，距离过期还有 ${days_until_expiry} 天。"
