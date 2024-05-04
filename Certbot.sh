@@ -17,7 +17,6 @@ for domain in $domains; do
   # 去除域名两端的空格
   domain=$(echo $domain | sed 's/^\s+|\s+$//g')
 
-
   # 申请证书
   certbot certonly --standalone -d $domain --email you@email.com --agree-tos --no-eff-email --force-renewal
 
@@ -29,6 +28,10 @@ for domain in $domains; do
 
   # 输出证书存放目录
   echo "证书存放目录：/etc/letsencrypt/live/$domain"
+
+  # 复制证书文件到 /root/cert/ 目录
+  mkdir -p /root/cert/
+  cp /etc/letsencrypt/live/$domain/*.pem /root/cert/
 done
 
 # 下载自动续签脚本
