@@ -32,7 +32,7 @@ for domain in $domains; do
 done
 
 # 下载自动续签脚本
-if [ ! -f "auto_cert_renewal_cron.sh" ]; then
+if [ ! -f "auto_cert_renewal-1.sh" ]; then
   curl -O https://raw.githubusercontent.com/kejilion/sh/main/auto_cert_renewal-1.sh
 fi
 
