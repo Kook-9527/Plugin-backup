@@ -19,7 +19,7 @@ for domain in $domains; do
 
 
   # 申请证书
-  certbot certonly --standalone -d $domain --email 1234@email.com --agree-tos --no-eff-email --force-renewal
+  certbot certonly --standalone -d $domain --email you@email.com --agree-tos --no-eff-email --force-renewal
 
   # 检查证书是否申请成功
   if [ $? -ne 0 ]; then
@@ -28,19 +28,19 @@ for domain in $domains; do
   fi
 
   # 输出证书存放目录
-  echo "证书存放目录：/root/cert/$domain"
+  echo "证书存放目录：/etc/letsencrypt/live/$domain"
 done
 
 # 下载自动续签脚本
 if [ ! -f "auto_cert_renewal.sh" ]; then
-  curl -O https://raw.githubusercontent.com/Kook-9527/Plugin-backup/main/auto_cert_renewal.sh
+  curl -O https://raw.githubusercontent.com/kejilion/sh/main/auto_cert_renewal-1.sh
 fi
 
 # 赋予自动续签脚本可执行权限
-chmod +x auto_cert_renewal.sh
+chmod +x auto_cert_renewal-1.sh
 
 # 执行自动续签脚本
-./auto_cert_renewal.sh
+./auto_cert_renewal-1.sh
 
 # 定时执行脚本
-echo "0 0 * * * cd ~ && ./auto_cert_renewal.sh" | crontab -
+echo "0 0 * * * cd ~ && ./auto_cert_renewal.sh-1" | crontab -
