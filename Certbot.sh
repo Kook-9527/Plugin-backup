@@ -36,14 +36,14 @@ done
 
 # 下载自动续签脚本
 if [ ! -f "auto_cert_renewal.sh" ]; then
-  curl -O https://raw.githubusercontent.com/kejilion/sh/main/auto_cert_renewal-1.sh
+  curl -O https://raw.githubusercontent.com/Kook-9527/Plugin-backup/main/auto_cert_renewal.sh
 fi
 
 # 赋予自动续签脚本可执行权限
-chmod +x auto_cert_renewal-1.sh
+chmod +x auto_cert_renewal.sh
 
 # 执行自动续签脚本
 ./auto_cert_renewal-1.sh
 
 # 定时执行脚本
-echo "0 0 * * * cd ~ && ./auto_cert_renewal.sh-1" | crontab -
+echo "0 0 * * * cd ~ && ./auto_cert_renewal.sh" | crontab -
