@@ -41,10 +41,10 @@ if [ ! -f "auto_cert_renewal.sh" ]; then
 fi
 
 # 赋予自动续签脚本可执行权限
-chmod +x auto_cert_renewal.sh
+chmod +x auto_cert_renewal2.sh
 
 # 执行自动续签脚本
-./auto_cert_renewal.sh
+./auto_cert_renewal2.sh
 
 # 定时执行脚本
-echo "0 0 * * * cd ~ && ./auto_cert_renewal.sh" | crontab -
+echo "0 0 * * * cd ~ && ./auto_cert_renewal2.sh" | crontab -
