@@ -43,4 +43,4 @@ chmod +x auto_cert_renewal.sh
 ./auto_cert_renewal.sh
 
 # 定时执行脚本
-echo "0 0 * * * cd ~ && ./auto_cert_renewal-1.sh" | crontab -
+echo "0 0 * * * cd ~ && ./auto_cert_renewal.sh" | crontab -
