@@ -1,10 +1,13 @@
 #!/bin/bash
 
+# 停止nginx服务
+sudo systemctl stop nginx
+
 # 更新软件包列表并安装 certbot
 apt update -y && apt install -y certbot
 
 # 获取域名
-read -p "请输入需要申请证书的域名（多个域名用空格分隔）：" domains
+read -p "请输入域名（多个域名用空格分隔）：" domains
 
 # 检查域名是否为空
 if [ -z "$domains" ]; then
@@ -47,3 +50,6 @@ chmod +x auto_cert_renewal.sh
 
 # 定时执行脚本
 echo "0 0 * * * cd ~ && ./auto_cert_renewal.sh" | crontab -
+
+# 启动nginx服务
+sudo systemctl start nginx
