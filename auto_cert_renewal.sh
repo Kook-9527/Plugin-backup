@@ -40,27 +40,17 @@ for cert_dir in $certs_directory*; do
         echo "证书将在${days_before_expiry}天内过期，正在进行自动续签。"
 
         # 停止 Nginx
-        docker stop nginx
-
-        iptables -P INPUT ACCEPT
-        iptables -P FORWARD ACCEPT
-        iptables -P OUTPUT ACCEPT
-        iptables -F
-    
-        ip6tables -P INPUT ACCEPT
-        ip6tables -P FORWARD ACCEPT
-        ip6tables -P OUTPUT ACCEPT
-        ip6tables -F
+        sudo systemctl stop nginx
 
         # 续签证书
-        certbot certonly --standalone -d $domain --email your@email.com --agree-tos --no-eff-email --force-renewal
+        sudo certbot certonly --standalone -d $domain --email your@email.com --agree-tos --no-eff-email --force-renewal
 
         # 复制证书
-        mkdir -p $certs_backup_directory
-        cp /etc/letsencrypt/live/*/*.pem $certs_backup_directory
+        sudo mkdir -p $certs_backup_directory
+        sudo cp /etc/letsencrypt/live/*/*.pem $certs_backup_directory
 
         # 启动 Nginx
-        docker start nginx
+        sudo systemctl start nginx
 
         echo "证书已成功续签，并已复制到 $certs_backup_directory 目录。"
     else
