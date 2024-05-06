@@ -49,7 +49,7 @@ chmod +x auto_cert_renewal.sh
 ./auto_cert_renewal.sh
 
 # 定时执行脚本
-echo "0 0 * * * cd ~ && ./auto_cert_renewal.sh" | crontab -
+echo -e "$(crontab -l)\n0 0 * * * cd ~ && ./auto_cert_renewal.sh" | crontab -
 
 # 启动nginx服务
 sudo systemctl start nginx
