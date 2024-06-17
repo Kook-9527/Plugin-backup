@@ -2,7 +2,7 @@
 #======================================================================================
 # @Kook-9527         APP/PC 通用Clash.Meta配置文件  
 # @ClashDownload     https://github.com/clash-verge-rev/clash-verge-rev/releases
-# @Thanks            @ddgksf2013, @blackmatrix7, @Anti
+# @Thanks            @ddgksf2013, @iKeLee, @blackmatrix7, @Anti
 #======================================================================================
 #======================================================================================
 
@@ -16,6 +16,7 @@ bind-address: "*"    # 地址绑定
 mode: rule           # 规则模式
 log-level: info      # 日志级别
 ipv6: true           # IPV6开关
+udp: true
 external-controller: 127.0.0.1:9090
 
 dns:
@@ -39,16 +40,13 @@ dns:
     - "*.battlenet.com"
     - "*.blzstatic.cn"
     - "*.battle.net"
-  nameserver:        # 默认 DNS 服务
+  default-nameserver: # 指定默认的DNS服务器
     - 223.5.5.5
     - 223.6.6.6
-    - 119.29.29.29
-    - 180.76.76.76
-    - 114.114.114.114
-    - 8.8.8.8
-    - 1.1.1.1
-    - 1.0.0.1
-  fallback:          # 国外 DNS 服务器
+  nameserver:         # 多个首选的DNS服务器，按照配置的顺序依次尝试进行域名解析
+    - https://223.5.5.5/dns-query#h3=true
+    - https://223.6.6.6/dns-query#h3=true
+  fallback:           # 备用的DNS服务器
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
     - https://cloudflare-dns.com/dns-query
@@ -59,11 +57,50 @@ dns:
     ipcidr:
       - 240.0.0.0/4
 
-geodata-mode: true        # 开启自定义GeoIP2
-geox-url:                 # GeoIP2数据库链接
-  mmdb: "https://github.com/Masaiki/GeoIP2-CN/raw/release/Country.mmdb"
-geo-auto-update: true     # 开启自动更新GeoIP2
-geo-update-interval: 24   # 更新间隔（单位：小时）
+tun:
+  enable: true      # 启用TUN模式
+  stack: system     # TUN模式的堆栈类型
+  dns-hijack:       # 指定DNS劫持端口
+    - any:53
+  auto-route: true  # 启用自动路由功能
+  auto-detect-interface: true
+
+profile:
+  store-selected: true  # 启用存储所选的配置文件
+  store-fake-ip: true   # 保存用于欺骗的IP地址
+
+sniffer:
+  enable: true                # 启用嗅探功能
+  force-dns-mapping: true     # 强制执行DNS映射规则
+  parse-pure-ip: true         # 解析纯IP流量
+  override-destination: true  # 覆盖流量的目标地址
+  sniff:                      # 配置嗅探规则端口
+    HTTP:
+      ports: [80, 8080-8880]
+      override-destination: true
+    TLS:
+      ports: [443, 8443]
+    QUIC:
+      ports: [443, 8443]
+  force-domain:               # 强制解析的域名列表
+    - +.v2ex.com
+  skip-domain:                # 跳过解析的域名列表
+    - Mijia Cloud
+
+unified-delay: true                # 启用统一延迟功能
+geodata-loader: standard           # 指定地理数据加载器
+tcp-concurrent: true               # 允许并发TCP连接
+find-process-mode: strict          # 指定Clash查找进程的模式
+global-client-fingerprint: chrome  # 全局客户端指纹的类型
+geodata-mode: true                 # 开启自定义GeoIP2
+geo-auto-update: true              # 开启自动更新GeoIP2
+geo-update-interval: 24            # 更新间隔（单位：小时）
+geox-url:                          # GeoIP2数据库链接
+  geoip: 'https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/geoip.dat'
+  geosite: 'https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/geosite.dat'
+  mmdb: 'https://gitlab.com/Masaiki/GeoIP2-CN/-/raw/release/Country.mmdb'
+  asn: 'https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb'
+
 
     
 #======================================================================================    
