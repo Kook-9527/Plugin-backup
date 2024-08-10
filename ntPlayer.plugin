@@ -1,0 +1,19 @@
+#!name=ntPlayer
+#!desc=解锁VIP会员去广告功能
+#!openUrl=https://apps.apple.com/app/id1613758141
+#!author=ios151
+#!homepage=https://raw.githubusercontent.com/Kook-9527/Rewrite/main/Revenuecat.js
+#!icon=https://raw.githubusercontent.com/Kook-9527/icon/main/logo/ntPlayer.png
+
+[Rewrite]
+https://api.lianjiu.fun/app/api/v1/profile - reject
+
+[Script]
+#修改
+http-response ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/Revenuecat.js, requires-body=true, timeout=60, tag=Revenuecat
+
+#清理
+http-request ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/Revenuecat.js, timeout=60, tag=Revenuecat
+
+[MITM]
+hostname = api.revenuecat.com, api.lianjiu.fun
