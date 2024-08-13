@@ -1,0 +1,14 @@
+#!name=彩云天气
+#!desc=解锁SVIP会员/AD净化(支持Pro版本)
+#!openUrl=https://apps.apple.com/app/id1067198688
+#!author=chxm1023
+#!homepage=https://raw.githubusercontent.com/chxm1023/Rewrite/main/caiyuntianqi.js
+#!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/CaiYun.png
+
+[Script]
+http-response ^https?:\/\/(biz|wrapper|starplucker)\.(cyapi|caiyunapp)\.(cn|com)\/(.+\/(user\?app_name|activity\?app_name|visitors|operation\/banners|operation\/homefeatures|config)|p\/v\d\/(vip_info|user_info|entries|privileges|trial_card\/info)) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/caiyuntianqi.js, requires-body=true, timeout=60, tag=caiyuntianqi
+
+http-request ^https?:\/\/(api|wrapper)\.(cyapi|caiyunapp)\.(cn|com)\/v\d\/(satellite|nafp\/origin_images) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/caiyuntianqi.js, timeout=60, tag=caiyuntianqi
+
+[MITM]
+hostname = *.cyapi.cn, *.caiyunapp.com
