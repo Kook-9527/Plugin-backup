@@ -1,0 +1,16 @@
+#!name= 电报外链跳转
+#!desc= Telegram外链直接跳转三方客户端Swiftgram
+#!openurlUrl=
+#!author= 秦城二院彭医生[https://github.com/dcpengx/Loon/]
+#!homepage= https://raw.githubusercontent.com/dcpengx/Loon/main/plugin/TG_url_to_SG/tgurl_to_sg.plugin
+#!icon= https://raw.githubusercontent.com/Kook-9527/icon/main/logo/Telegram.png
+#!system = 
+#!system_version = 
+#!loon_version =
+#!tag = 功能增强,telegram
+
+[rewrite]
+(https:\/\/)?t\.me\/(.+) 302 sg://resolve?domain=$2
+
+[mitm]
+hostname = t.me
