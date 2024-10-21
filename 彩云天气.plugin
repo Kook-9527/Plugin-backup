@@ -25,13 +25,13 @@ DOMAIN, gather.colorfulclouds.net, REJECT
 
 [Script]
 # 解锁新版VIP（7.20.0之后）
-http-response ^https:\/\/biz\.cyapi\.cn\/(api\/v1\/user_detail|p\/v1\/vip_info|v2\/user) script-path = main/Scripts/break/caiyun.js, requires-body = true, tag = cy_mine
+http-response ^https:\/\/biz\.cyapi\.cn\/(api\/v1\/user_detail|p\/v1\/vip_info|v2\/user) script-path = caiyun.js, requires-body = true, tag = cy_mine
 # 底栏控制项目 主页图标 天气助手 彩云AI
-http-response ^https:\/\/api\.caiyunapp\.com\/v1\/activity\? script-path = main/Scripts/break/caiyun.js, requires-body = true, tag = cy_tab1
+http-response ^https:\/\/api\.caiyunapp\.com\/v1\/activity\? script-path = caiyun.js, requires-body = true, tag = cy_tab1
 # 赏叶赏花
-http-response ^https:\/\/wrapper\.cyapi\.cn\/v1\/activity\? script-path = main/Scripts/break/caiyun.js, requires-body = true, tag = cy_tab2
+http-response ^https:\/\/wrapper\.cyapi\.cn\/v1\/activity\? script-path = caiyun.js, requires-body = true, tag = cy_tab2
 # 卫星云图 48小时预报
-http-request ^https:\/\/wrapper\.cyapi\.cn\/v1\/(nafp\/origin_images|satellite)\? script-path = main/Scripts/break/caiyun.js, timeout=60, tag=caiyun
+http-request ^https:\/\/wrapper\.cyapi\.cn\/v1\/(nafp\/origin_images|satellite)\? script-path = caiyun.js, timeout=60, tag=caiyun
 
 
 
