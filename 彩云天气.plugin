@@ -4,7 +4,7 @@
 #!author=RuCu6[https://github.com/RuCu6],苍井灰灰[https://github.com/wf021325]
 #!homepage=https://raw.githubusercontent.com/RuCu6/Loon/refs/heads/main/Plugins/caiyun.plugin
 #!icon=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/CaiYun.png
-#!date=2024-09-07
+#!date=2024-09-08 10:30
 
 [Rule]
 # 上传信息
@@ -24,10 +24,10 @@ DOMAIN, gather.colorfulclouds.net, REJECT
 
 
 [Script]
-# 底栏控制项目 主页图标 天气助手 彩云AI
-http-response ^https:\/\/api\.caiyunapp\.com\/v1\/activity\? script-path = main/Scripts/break/caiyun.js, requires-body = true, tag = cy_tab1
 # 解锁新版VIP（7.20.0之后）
 http-response ^https:\/\/biz\.cyapi\.cn\/(api\/v1\/user_detail|p\/v1\/vip_info|v2\/user) script-path = main/Scripts/break/caiyun.js, requires-body = true, tag = cy_mine
+# 底栏控制项目 主页图标 天气助手 彩云AI
+http-response ^https:\/\/api\.caiyunapp\.com\/v1\/activity\? script-path = main/Scripts/break/caiyun.js, requires-body = true, tag = cy_tab1
 # 赏叶赏花
 http-response ^https:\/\/wrapper\.cyapi\.cn\/v1\/activity\? script-path = main/Scripts/break/caiyun.js, requires-body = true, tag = cy_tab2
 # 卫星云图 48小时预报
