@@ -1,8 +1,8 @@
 #!name = Sub-Store
 #!desc = 高级订阅管理工具（去掉定时同步Gist），使用前请在本插件的详情页面为[PROXY]项分配代理策略。
 #!openUrl = https://sub.store
-#!author = Peng-YM
-#!homepage = https://raw.githubusercontent.com/Kook-9527/Plugin-backup/refs/heads/main/Sub-Store.plugin
+#!author = Peng-YM[https://github.com/sub-store-org/Sub-Store]
+#!homepage = https://raw.githubusercontent.com/sub-store-org/Sub-Store/refs/heads/master/config/Loon.plugin
 #!icon = https://raw.githubusercontent.com/Kook-9527/icon/main/logo/Sub-Store.png
 #!select = 节点缓存有效期, 1分钟, 5分钟, 10分钟, 30分钟, 1小时, 2小时, 3小时, 6小时, 12小时, 24小时, 48小时, 72小时, 参数传入
 #!select = 响应头缓存有效期, 1分钟, 5分钟, 10分钟, 30分钟, 1小时, 2小时, 3小时, 6小时, 12小时, 24小时, 48小时, 72小时, 参数传入
