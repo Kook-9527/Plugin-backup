@@ -120,7 +120,7 @@ geox-url:                          # GeoIP2数据库链接
 # > 锚点
 #======================================================================================  
 # 主策略组 > 选择节点分组
-pr:   &a1   {type: select, proxies: [香港节点, 日本节点, 狮城节点, 台湾节点, 美国节点] }
+pr:   &a1   {type: select, proxies: [香港节点, 日本节点, 狮城节点, 台湾节点, 美国节点, 链式代理] }
 # 订阅链接 > 更新时间
 p:    &a2   {type: http, interval: 3600, health-check: {enable: true, url: http://www.apple.com/library/test/success.html, interval: 300} }
 # 负载均衡 > 轮询选择
@@ -182,6 +182,9 @@ proxy-groups:
   - {name: 狮城节点, <<: *a5, filter: "^(?=.*(新|坡|SG|(?i)Singapore))(?!.*(填不想包含的节点)).*",     proxies: [], icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png"}
   - {name: 台湾节点, <<: *a5, filter: "^(?=.*(台|湾|TW|(?i)Taiwan))(?!.*(填不想包含的节点)).*",        proxies: [], icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png"}
   - {name: 美国节点, <<: *a5, filter: "^(?=.*(美|US|(?i)States|American))(?!.*(填不想包含的节点)).*",  proxies: [], icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png"}
+
+# 代理链流量走向机制 丨 Clash本机 <-> 前置节点 <-> 落地节点 <-> Internet互联网
+  - {name: 链式代理, type: relay, proxies: ["香港节点", "美国节点"], icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Final.png"}
 
 
 #======================================================================================
