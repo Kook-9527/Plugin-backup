@@ -9,7 +9,7 @@
 # CN域名后缀
 *.cn = server:quic://dns.alidns.com:853
 
-# 阿里
+# 阿里系
 *.tmall.com = server:quic://dns.alidns.com:853
 *.taobao.com = server:quic://dns.alidns.com:853
 *.aliapp.org = server:quic://dns.alidns.com:853
@@ -27,15 +27,15 @@
 *.ele.me = server:quic://dns.alidns.com:853
 *.cainiao.com = server:quic://dns.alidns.com:853
 
-# 苹果
-*.apple.com = server:quic://dns.alidns.com:853
-*.icloud.com = server:quic://dns.alidns.com:853
-
-# 腾讯
+# 腾讯系
 *.jd.com = server:https://doh.pub/dns-query
 *.qq.com = server:https://doh.pub/dns-query
 *.tencent.com = server:https://doh.pub/dns-query
 *.weixin.com = server:https://doh.pub/dns-query
+
+# 苹果
+*.apple.com = server:quic://dns.alidns.com:853
+*.icloud.com = server:quic://dns.alidns.com:853
 
 # 拼多多
 *.pddpic.com = server:quic://dns.alidns.com:853
