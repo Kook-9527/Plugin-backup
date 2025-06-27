@@ -29,15 +29,11 @@
 
 # 腾讯系
 *.doh.pub = server:https://doh.pub/dns-query
-*.jd.com = server:https://doh.pub/dns-query
 *.qq.com = server:https://doh.pub/dns-query
 *.tencent.com = server:https://doh.pub/dns-query
 *.weixin.com = server:https://doh.pub/dns-query
-*.360buyimg.com = server:https://doh.pub/dns-query
-*.jdpay.com = server:https://doh.pub/dns-query
-*.jdcloud-oss.com = server:https://doh.pub/dns-query
 
-# 字节跳动
+# 抖音系
 *.douyinstatic.com = server:quic://dns.alidns.com:853
 *.douyinpic.com = server:quic://dns.alidns.com:853
 *.douyinvod.com = server:quic://dns.alidns.com:853
@@ -65,19 +61,25 @@
 *.icloud.com = server:quic://dns.alidns.com:853
 *.icloud.com.cn = server:quic://dns.alidns.com:853
 
+# 京东
+*.jd.com = server:quic://dns.alidns.com:853
+*.360buyimg.com = server:quic://dns.alidns.com:853
+*.jdpay.com = server:quic://dns.alidns.com:853
+*.jdcloud-oss.com = server:quic://dns.alidns.com:853
+
 # 拼多多
 *.pddpic.com = server:quic://dns.alidns.com:853
 *.pinduoduo.com = server:quic://dns.alidns.com:853
-
-# 百度
-*.baidu.com = server:quic://dns.alidns.com:853
-*.tieba.com = server:quic://dns.alidns.com:853
 
 # 美团
 *.meituan.net = server:quic://dns.alidns.com:853
 *.meituan.com = server:quic://dns.alidns.com:853
 *.dianping.com = server:quic://dns.alidns.com:853
 *.tec73.com = server:quic://dns.alidns.com:853
+
+# 百度
+*.baidu.com = server:quic://dns.alidns.com:853
+*.tieba.com = server:quic://dns.alidns.com:853
 
 # 微博
 *.weibo.com = server:quic://dns.alidns.com:853
