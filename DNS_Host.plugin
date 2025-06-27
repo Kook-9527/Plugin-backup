@@ -17,18 +17,23 @@
 *.alibaba-inc.com = server:quic://dns.alidns.com:853
 *.alibabausercontent.com = server:quic://dns.alidns.com:853
 *.amap.com = server:quic://dns.alidns.com:853
+
 *.autonavi.com = server:quic://dns.alidns.com:853
 *.dingtalk.com = server:quic://dns.alidns.com:853
+
 *.apple.com = server:quic://dns.alidns.com:853
 *.icloud.com = server:quic://dns.alidns.com:853
+
 *.jd.com = server:quic://dns.alidns.com:853
 *.qq.com = server:quic://dns.alidns.com:853
 *.tencent.com = server:quic://dns.alidns.com:853
 *.weixin.com = server:quic://dns.alidns.com:853
+
 *.pddpic.com = server:quic://dns.alidns.com:853
 *.pinduoduo.com = server:quic://dns.alidns.com:853
 *.baidu.com = server:quic://dns.alidns.com:853
 *.tieba.com = server:quic://dns.alidns.com:853
+
 *.douyinstatic.com = server:quic://dns.alidns.com:853
 *.douyinpic.com = server:quic://dns.alidns.com:853
 *.douyinvod.com = server:quic://dns.alidns.com:853
@@ -40,6 +45,7 @@
 *.saxysec.com = server:quic://dns.alidns.com:853
 *.idouyinvod.com = server:quic://dns.alidns.com:853
 *.ecombdapi.com = server:quic://dns.alidns.com:853
+
 *.meituan.net = server:quic://dns.alidns.com:853
 *.meituan.com = server:quic://dns.alidns.com:853
 *.dianping.com = server:quic://dns.alidns.com:853
