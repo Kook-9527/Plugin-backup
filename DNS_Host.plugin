@@ -25,6 +25,7 @@
 *.dingtalk.com = server:quic://dns.alidns.com:853
 *.elemecdn.com = server:quic://dns.alidns.com:853
 *.ele.me = server:quic://dns.alidns.com:853
+*.cainiao.com = server:quic://dns.alidns.com:853
 
 # 苹果
 *.apple.com = server:quic://dns.alidns.com:853
