@@ -10,7 +10,7 @@
 *.cn = server:quic://dns.alidns.com:853
 
 # 阿里系
-*.alicdn.com = server:223.5.5.5
+*.alicdn.com = server:quic://dns.alidns.com:853
 *.tmall.com = server:quic://dns.alidns.com:853
 *.taobao.com = server:quic://dns.alidns.com:853
 *.aliapp.org = server:quic://dns.alidns.com:853
@@ -28,11 +28,14 @@
 *.cainiao.com = server:quic://dns.alidns.com:853
 
 # 腾讯系
-*.doh.pub = server:119.29.29.29
+*.doh.pub = server:https://doh.pub/dns-query
 *.jd.com = server:https://doh.pub/dns-query
 *.qq.com = server:https://doh.pub/dns-query
 *.tencent.com = server:https://doh.pub/dns-query
 *.weixin.com = server:https://doh.pub/dns-query
+*.360buyimg.com = server:https://doh.pub/dns-query
+*.jdpay.com = server:https://doh.pub/dns-query
+*.jdcloud-oss.com = server:https://doh.pub/dns-query
 
 # 字节跳动
 *.douyinstatic.com = server:quic://dns.alidns.com:853
@@ -60,6 +63,7 @@
 # 苹果
 *.apple.com = server:quic://dns.alidns.com:853
 *.icloud.com = server:quic://dns.alidns.com:853
+*.icloud.com.cn = server:quic://dns.alidns.com:853
 
 # 拼多多
 *.pddpic.com = server:quic://dns.alidns.com:853
