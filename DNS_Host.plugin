@@ -64,6 +64,10 @@
 *.dianping.com = server:quic://dns.alidns.com:853
 *.tec73.com = server:quic://dns.alidns.com:853
 
+# 微博
+*.weibo.com = server:quic://dns.alidns.com:853
+*.weibocdn.com = server:quic://dns.alidns.com:853
+
 # 其他
 *.weibo.com = server:quic://dns.alidns.com:853
 *.waimaimingtang.com = server:quic://dns.alidns.com:853
