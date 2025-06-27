@@ -5,7 +5,11 @@
 #!icon=https://raw.githubusercontent.com/Kook-9527/icon/main/logo/DNS.png
 #!date=2025-06-27
 [Host] 
+
+# CN域名后缀
 *.cn = server:quic://dns.alidns.com:853
+
+# 阿里系
 *.tmall.com = server:quic://dns.alidns.com:853
 *.taobao.com = server:quic://dns.alidns.com:853
 *.aliapp.org = server:quic://dns.alidns.com:853
@@ -17,23 +21,30 @@
 *.alibaba-inc.com = server:quic://dns.alidns.com:853
 *.alibabausercontent.com = server:quic://dns.alidns.com:853
 *.amap.com = server:quic://dns.alidns.com:853
-
 *.autonavi.com = server:quic://dns.alidns.com:853
 *.dingtalk.com = server:quic://dns.alidns.com:853
+*.elemecdn.com = server:quic://dns.alidns.com:853
+*.ele.me = server:quic://dns.alidns.com:853
 
+# 苹果系
 *.apple.com = server:quic://dns.alidns.com:853
 *.icloud.com = server:quic://dns.alidns.com:853
 
-*.jd.com = server:quic://dns.alidns.com:853
-*.qq.com = server:quic://dns.alidns.com:853
-*.tencent.com = server:quic://dns.alidns.com:853
-*.weixin.com = server:quic://dns.alidns.com:853
+# 腾讯系
+*.jd.com = server:https://doh.pub/dns-query
+*.qq.com = server:https://doh.pub/dns-query
+*.tencent.com = server:https://doh.pub/dns-query
+*.weixin.com = server:https://doh.pub/dns-query
 
+# 拼多多
 *.pddpic.com = server:quic://dns.alidns.com:853
 *.pinduoduo.com = server:quic://dns.alidns.com:853
+
+# 百度系
 *.baidu.com = server:quic://dns.alidns.com:853
 *.tieba.com = server:quic://dns.alidns.com:853
 
+# 字节系
 *.douyinstatic.com = server:quic://dns.alidns.com:853
 *.douyinpic.com = server:quic://dns.alidns.com:853
 *.douyinvod.com = server:quic://dns.alidns.com:853
@@ -46,10 +57,10 @@
 *.idouyinvod.com = server:quic://dns.alidns.com:853
 *.ecombdapi.com = server:quic://dns.alidns.com:853
 
+# 美团
 *.meituan.net = server:quic://dns.alidns.com:853
 *.meituan.com = server:quic://dns.alidns.com:853
 *.dianping.com = server:quic://dns.alidns.com:853
-*.elemecdn.com = server:quic://dns.alidns.com:853
-*.ele.me = server:quic://dns.alidns.com:853
+
 *.waimaimingtang.com = server:quic://dns.alidns.com:853
 *.dpfile.com = server:quic://dns.alidns.com:853
