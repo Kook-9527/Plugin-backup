@@ -50,14 +50,21 @@
 *.douyinstatic.com = server:quic://dns.alidns.com:853
 *.douyinpic.com = server:quic://dns.alidns.com:853
 *.douyinvod.com = server:quic://dns.alidns.com:853
+*.idouyinvod.com = server:quic://dns.alidns.com:853
 *.zijieapi.com = server:quic://dns.alidns.com:853
 *.zjcdn.com = server:quic://dns.alidns.com:853
 *.snssdk.com = server:quic://dns.alidns.com:853
 *.amemv.com = server:quic://dns.alidns.com:853
 *.pstatp.com = server:quic://dns.alidns.com:853
 *.saxysec.com = server:quic://dns.alidns.com:853
-*.idouyinvod.com = server:quic://dns.alidns.com:853
 *.ecombdapi.com = server:quic://dns.alidns.com:853
+*.bytedance.com = server:quic://dns.alidns.com:853
+*.byteimg.com = server:quic://dns.alidns.com:853
+*.z1cdn.com = server:quic://dns.alidns.com:853
+*.ndcpp.com = server:quic://dns.alidns.com:853
+*.douyincdn.com = server:quic://dns.alidns.com:853
+*.bytegecko.com = server:quic://dns.alidns.com:853
+*.bytetos.com = server:quic://dns.alidns.com:853
 
 # 美团
 *.meituan.net = server:quic://dns.alidns.com:853
