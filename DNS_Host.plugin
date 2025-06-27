@@ -10,12 +10,12 @@
 *.cn = server:quic://dns.alidns.com:853
 
 # 阿里系
+*.alicdn.com = server:223.5.5.5
 *.tmall.com = server:quic://dns.alidns.com:853
 *.taobao.com = server:quic://dns.alidns.com:853
 *.aliapp.org = server:quic://dns.alidns.com:853
 *.alipay.com = server:quic://dns.alidns.com:853
 *.alipayobjects.com = server:quic://dns.alidns.com:853
-*.alicdn.com = server:quic://dns.alidns.com:853
 *.aliyuncs.com = server:quic://dns.alidns.com:853
 *.alibaba.com = server:quic://dns.alidns.com:853
 *.alibaba-inc.com = server:quic://dns.alidns.com:853
@@ -28,6 +28,7 @@
 *.cainiao.com = server:quic://dns.alidns.com:853
 
 # 腾讯系
+*.doh.pub = server:119.29.29.29
 *.jd.com = server:https://doh.pub/dns-query
 *.qq.com = server:https://doh.pub/dns-query
 *.tencent.com = server:https://doh.pub/dns-query
