@@ -62,6 +62,7 @@
 *.meituan.net = server:quic://dns.alidns.com:853
 *.meituan.com = server:quic://dns.alidns.com:853
 *.dianping.com = server:quic://dns.alidns.com:853
+*.tec73.com = server:quic://dns.alidns.com:853
 
 # 其他
 *.weibo.com = server:quic://dns.alidns.com:853
