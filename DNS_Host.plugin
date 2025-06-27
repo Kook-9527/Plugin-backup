@@ -3,9 +3,9 @@
 #!author=Kook9527
 #!homepage=https://raw.githubusercontent.com/Kook-9527/Plugin-backup/refs/heads/main/DNS_Host.plugin
 #!icon=https://raw.githubusercontent.com/Kook-9527/icon/main/logo/DNS.png
-#!date=2025-06-27
-[Host] 
+#!date=2025-06-28
 
+[Host] 
 # CN域名后缀
 *.cn = server:quic://dns.alidns.com:853
 
