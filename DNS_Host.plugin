@@ -34,18 +34,6 @@
 *.tencent.com = server:https://doh.pub/dns-query
 *.weixin.com = server:https://doh.pub/dns-query
 
-# 苹果
-*.apple.com = server:quic://dns.alidns.com:853
-*.icloud.com = server:quic://dns.alidns.com:853
-
-# 拼多多
-*.pddpic.com = server:quic://dns.alidns.com:853
-*.pinduoduo.com = server:quic://dns.alidns.com:853
-
-# 百度
-*.baidu.com = server:quic://dns.alidns.com:853
-*.tieba.com = server:quic://dns.alidns.com:853
-
 # 字节跳动
 *.douyinstatic.com = server:quic://dns.alidns.com:853
 *.douyinpic.com = server:quic://dns.alidns.com:853
@@ -65,6 +53,21 @@
 *.douyincdn.com = server:quic://dns.alidns.com:853
 *.bytegecko.com = server:quic://dns.alidns.com:853
 *.bytetos.com = server:quic://dns.alidns.com:853
+*.doubao.com = server:quic://dns.alidns.com:853
+*.baike.com = server:quic://dns.alidns.com:853
+*.qishui.com = server:quic://dns.alidns.com:853
+
+# 苹果
+*.apple.com = server:quic://dns.alidns.com:853
+*.icloud.com = server:quic://dns.alidns.com:853
+
+# 拼多多
+*.pddpic.com = server:quic://dns.alidns.com:853
+*.pinduoduo.com = server:quic://dns.alidns.com:853
+
+# 百度
+*.baidu.com = server:quic://dns.alidns.com:853
+*.tieba.com = server:quic://dns.alidns.com:853
 
 # 美团
 *.meituan.net = server:quic://dns.alidns.com:853
