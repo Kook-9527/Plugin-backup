@@ -78,6 +78,10 @@
 *.tec73.com = server:quic://dns.alidns.com:853
 *.sankuai.com = server:quic://dns.alidns.com:853
 
+# 朴朴超市
+*.pupuapi.com = server:quic://dns.alidns.com:853
+*.pupumall.com = server:quic://dns.alidns.com:853
+
 # 百度
 *.baidu.com = server:quic://dns.alidns.com:853
 *.tieba.com = server:quic://dns.alidns.com:853
@@ -86,8 +90,11 @@
 *.weibo.com = server:quic://dns.alidns.com:853
 *.weibocdn.com = server:quic://dns.alidns.com:853
 
-# 其他
+# 彩云天气
 caiyunapp.com = server:quic://dns.alidns.com:853
 *.caiyunapp.com = server:quic://dns.alidns.com:853
+
+
+# 其他
 *.waimaimingtang.com = server:quic://dns.alidns.com:853
 *.dpfile.com = server:quic://dns.alidns.com:853
