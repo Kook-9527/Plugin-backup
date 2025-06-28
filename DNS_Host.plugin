@@ -55,6 +55,7 @@
 *.doubao.com = server:quic://dns.alidns.com:853
 *.baike.com = server:quic://dns.alidns.com:853
 *.qishui.com = server:quic://dns.alidns.com:853
+*.bytednsdoc.com = server:quic://dns.alidns.com:853
 
 # 苹果
 *.apple.com = server:quic://dns.alidns.com:853
