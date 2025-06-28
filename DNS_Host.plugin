@@ -100,5 +100,6 @@ caiyunapp.com = server:quic://dns.alidns.com:853
 
 
 # 其他
+*.ninebot.com = server:quic://dns.alidns.com:853
 *.waimaimingtang.com = server:quic://dns.alidns.com:853
 *.dpfile.com = server:quic://dns.alidns.com:853
