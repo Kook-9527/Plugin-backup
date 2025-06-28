@@ -1,6 +1,6 @@
 #!name = 自用DNS映射
 #!desc = 指定域名请求DNS时使用特定的DNS服务器
-#!author = Kook9527
+#!author = Kook9527[https://github.com/Kook9527]
 #!homepage = https://raw.githubusercontent.com/Kook-9527/Plugin-backup/refs/heads/main/DNS_Host.plugin
 #!icon = https://raw.githubusercontent.com/Kook-9527/icon/main/logo/DNS.png
 #!date = 2025-06-28
