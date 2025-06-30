@@ -98,9 +98,11 @@
 caiyunapp.com = server:quic://dns.alidns.com:853
 *.caiyunapp.com = server:quic://dns.alidns.com:853
 
+# 喜马拉雅
+*.ximalaya.com = server:quic://dns.alidns.com:853
+*.xmcdn.com = server:quic://dns.alidns.com:853
 
 # 其他
-*.ximalaya.com = server:quic://dns.alidns.com:853
 *.ninebot.com = server:quic://dns.alidns.com:853
 *.waimaimingtang.com = server:quic://dns.alidns.com:853
 *.dpfile.com = server:quic://dns.alidns.com:853
