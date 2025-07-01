@@ -26,6 +26,7 @@
 *.elemecdn.com = server:quic://dns.alidns.com:853
 *.ele.me = server:quic://dns.alidns.com:853
 *.cainiao.com = server:quic://dns.alidns.com:853
+*.yangkeduo.com = server:quic://dns.alidns.com:853
 
 # 腾讯系 ##可替换为https://doh.pub/dns-query
 *.doh.pub = server:quic://dns.alidns.com:853
@@ -57,8 +58,6 @@
 *.z1cdn.com = server:quic://dns.alidns.com:853
 *.zijieapi.com = server:quic://dns.alidns.com:853
 *.zjcdn.com = server:quic://dns.alidns.com:853
-
-
 
 # 苹果
 *.apple.com = server:quic://dns.alidns.com:853
@@ -103,6 +102,7 @@ caiyunapp.com = server:quic://dns.alidns.com:853
 *.xmcdn.com = server:quic://dns.alidns.com:853
 
 # 其他
+*.miwifi.com = server:quic://dns.alidns.com:853
 *.ninebot.com = server:quic://dns.alidns.com:853
 *.waimaimingtang.com = server:quic://dns.alidns.com:853
 *.dpfile.com = server:quic://dns.alidns.com:853
