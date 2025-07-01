@@ -49,6 +49,7 @@
 *.douyinvod.com = server:quic://dns.alidns.com:853
 *.douyincdn.com = server:quic://dns.alidns.com:853
 *.ecombdapi.com = server:quic://dns.alidns.com:853
+*.ecombdpage.com = server:quic://dns.alidns.com:853
 *.idouyinvod.com = server:quic://dns.alidns.com:853
 *.ndcpp.com = server:quic://dns.alidns.com:853
 *.pstatp.com = server:quic://dns.alidns.com:853
@@ -103,6 +104,7 @@ caiyunapp.com = server:quic://dns.alidns.com:853
 *.xmcdn.com = server:quic://dns.alidns.com:853
 
 # 其他
+*.ks-cdn.com = server:quic://dns.alidns.com:853
 *.miwifi.com = server:quic://dns.alidns.com:853
 *.ninebot.com = server:quic://dns.alidns.com:853
 *.waimaimingtang.com = server:quic://dns.alidns.com:853
