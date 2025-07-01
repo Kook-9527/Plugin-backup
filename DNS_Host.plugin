@@ -66,6 +66,7 @@
 *.icloud.com.cn = server:quic://dns.alidns.com:853
 *.cdn-apple.com = server:quic://dns.alidns.com:853
 *.mzstatic.com = server:quic://dns.alidns.com:853
+
 # 京东
 *.jd.com = server:quic://dns.alidns.com:853
 *.360buyimg.com = server:quic://dns.alidns.com:853
