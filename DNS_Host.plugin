@@ -5,108 +5,108 @@
 #!icon = https://raw.githubusercontent.com/Kook-9527/icon/main/logo/DNS.png
 #!date = 2025-06-28
 
-[Host] 
+[Host]
 # CN域名后缀
-*.cn = server:quic://dns.alidns.com:853
+*.cn = server:system
 
-# 阿里系
-*.alicdn.com = server:quic://dns.alidns.com:853
-*.tmall.com = server:quic://dns.alidns.com:853
-*.taobao.com = server:quic://dns.alidns.com:853
-*.aliapp.org = server:quic://dns.alidns.com:853
-*.alipay.com = server:quic://dns.alidns.com:853
-*.alipayobjects.com = server:quic://dns.alidns.com:853
-*.aliyuncs.com = server:quic://dns.alidns.com:853
-*.alibaba.com = server:quic://dns.alidns.com:853
-*.alibaba-inc.com = server:quic://dns.alidns.com:853
-*.alibabausercontent.com = server:quic://dns.alidns.com:853
-*.amap.com = server:quic://dns.alidns.com:853
-*.autonavi.com = server:quic://dns.alidns.com:853
-*.dingtalk.com = server:quic://dns.alidns.com:853
-*.elemecdn.com = server:quic://dns.alidns.com:853
-*.ele.me = server:quic://dns.alidns.com:853
-*.cainiao.com = server:quic://dns.alidns.com:853
-*.yangkeduo.com = server:quic://dns.alidns.com:853
+# 阿里系 ##可替换为quic://dns.alidns.com:853
+*.alicdn.com = server:system
+*.tmall.com = server:system
+*.taobao.com = server:system
+*.aliapp.org = server:system
+*.alipay.com = server:system
+*.alipayobjects.com = server:system
+*.aliyuncs.com = server:system
+*.alibaba.com = server:system
+*.alibaba-inc.com = server:system
+*.alibabausercontent.com = server:system
+*.amap.com = server:system
+*.autonavi.com = server:system
+*.dingtalk.com = server:system
+*.elemecdn.com = server:system
+*.ele.me = server:system
+*.cainiao.com = server:system
+*.yangkeduo.com = server:system
 
 # 腾讯系 ##可替换为https://doh.pub/dns-query
-*.doh.pub = server:quic://dns.alidns.com:853
-*.qq.com = server:quic://dns.alidns.com:853
-*.tencent.com = server:quic://dns.alidns.com:853
-*.weixin.com = server:quic://dns.alidns.com:853
+*.doh.pub = server:system
+*.qq.com = server:system
+*.tencent.com = server:system
+*.weixin.com = server:system
 
 # 抖音系
-*.amemv.com = server:quic://dns.alidns.com:853
-*.bytedance.com = server:quic://dns.alidns.com:853
-*.byteimg.com = server:quic://dns.alidns.com:853
-*.bytegecko.com = server:quic://dns.alidns.com:853
-*.bytetos.com = server:quic://dns.alidns.com:853
-*.baike.com = server:quic://dns.alidns.com:853
-*.bytednsdoc.com = server:quic://dns.alidns.com:853
-*.bytecdn.com = server:quic://dns.alidns.com:853
-*.doubao.com = server:quic://dns.alidns.com:853
-*.douyinstatic.com = server:quic://dns.alidns.com:853
-*.douyinpic.com = server:quic://dns.alidns.com:853
-*.douyinvod.com = server:quic://dns.alidns.com:853
-*.douyincdn.com = server:quic://dns.alidns.com:853
-*.ecombdapi.com = server:quic://dns.alidns.com:853
-*.ecombdpage.com = server:quic://dns.alidns.com:853
-*.idouyinvod.com = server:quic://dns.alidns.com:853
-*.ndcpp.com = server:quic://dns.alidns.com:853
-*.pstatp.com = server:quic://dns.alidns.com:853
-*.qishui.com = server:quic://dns.alidns.com:853
-*.saxysec.com = server:quic://dns.alidns.com:853
-*.snssdk.com = server:quic://dns.alidns.com:853
-*.z1cdn.com = server:quic://dns.alidns.com:853
-*.zijieapi.com = server:quic://dns.alidns.com:853
-*.zjcdn.com = server:quic://dns.alidns.com:853
+*.amemv.com = server:system
+*.bytedance.com = server:system
+*.byteimg.com = server:system
+*.bytegecko.com = server:system
+*.bytetos.com = server:system
+*.baike.com = server:system
+*.bytednsdoc.com = server:system
+*.bytecdn.com = server:system
+*.doubao.com = server:system
+*.douyinstatic.com = server:system
+*.douyinpic.com = server:system
+*.douyinvod.com = server:system
+*.douyincdn.com = server:system
+*.ecombdapi.com = server:system
+*.ecombdpage.com = server:system
+*.idouyinvod.com = server:system
+*.ndcpp.com = server:system
+*.pstatp.com = server:system
+*.qishui.com = server:system
+*.saxysec.com = server:system
+*.snssdk.com = server:system
+*.z1cdn.com = server:system
+*.zijieapi.com = server:system
+*.zjcdn.com = server:system
 
 # 苹果
-*.apple.com = server:quic://dns.alidns.com:853
-*.icloud.com = server:quic://dns.alidns.com:853
-*.icloud.com.cn = server:quic://dns.alidns.com:853
-*.cdn-apple.com = server:quic://dns.alidns.com:853
-*.mzstatic.com = server:quic://dns.alidns.com:853
+*.apple.com = server:system
+*.icloud.com = server:system
+*.icloud.com.cn = server:system
+*.cdn-apple.com = server:system
+*.mzstatic.com = server:system
 
 # 京东
-*.jd.com = server:quic://dns.alidns.com:853
-*.360buyimg.com = server:quic://dns.alidns.com:853
-*.jdpay.com = server:quic://dns.alidns.com:853
-*.jdcloud-oss.com = server:quic://dns.alidns.com:853
+*.jd.com = server:system
+*.360buyimg.com = server:system
+*.jdpay.com = server:system
+*.jdcloud-oss.com = server:system
 
 # 拼多多
-*.pddpic.com = server:quic://dns.alidns.com:853
-*.pinduoduo.com = server:quic://dns.alidns.com:853
+*.pddpic.com = server:system
+*.pinduoduo.com = server:system
 
 # 美团
-*.meituan.net = server:quic://dns.alidns.com:853
-*.meituan.com = server:quic://dns.alidns.com:853
-*.dianping.com = server:quic://dns.alidns.com:853
-*.tec73.com = server:quic://dns.alidns.com:853
-*.sankuai.com = server:quic://dns.alidns.com:853
+*.meituan.net = server:system
+*.meituan.com = server:system
+*.dianping.com = server:system
+*.tec73.com = server:system
+*.sankuai.com = server:system
 
 # 朴朴超市
-*.pupuapi.com = server:quic://dns.alidns.com:853
-*.pupumall.com = server:quic://dns.alidns.com:853
+*.pupuapi.com = server:system
+*.pupumall.com = server:system
 
 # 百度
-*.baidu.com = server:quic://dns.alidns.com:853
-*.tieba.com = server:quic://dns.alidns.com:853
+*.baidu.com = server:system
+*.tieba.com = server:system
 
 # 微博
-*.weibo.com = server:quic://dns.alidns.com:853
-*.weibocdn.com = server:quic://dns.alidns.com:853
+*.weibo.com = server:system
+*.weibocdn.com = server:system
 
 # 彩云天气
-caiyunapp.com = server:quic://dns.alidns.com:853
-*.caiyunapp.com = server:quic://dns.alidns.com:853
+caiyunapp.com = server:system
+*.caiyunapp.com = server:system
 
 # 喜马拉雅
-*.ximalaya.com = server:quic://dns.alidns.com:853
-*.xmcdn.com = server:quic://dns.alidns.com:853
+*.ximalaya.com = server:system
+*.xmcdn.com = server:system
 
 # 其他
-*.ks-cdn.com = server:quic://dns.alidns.com:853
-*.miwifi.com = server:quic://dns.alidns.com:853
-*.ninebot.com = server:quic://dns.alidns.com:853
-*.waimaimingtang.com = server:quic://dns.alidns.com:853
-*.dpfile.com = server:quic://dns.alidns.com:853
+*.ks-cdn.com = server:system
+*.miwifi.com = server:system
+*.ninebot.com = server:system
+*.waimaimingtang.com = server:system
+*.dpfile.com = server:system
