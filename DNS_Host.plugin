@@ -33,6 +33,7 @@
 *.qq.com = server:quic://dns.alidns.com:853
 *.tencent.com = server:quic://dns.alidns.com:853
 *.weixin.com = server:quic://dns.alidns.com:853
+*.gcloudcs.com = server:quic://dns.alidns.com:853
 
 # 抖音系
 *.amemv.com = server:quic://dns.alidns.com:853
