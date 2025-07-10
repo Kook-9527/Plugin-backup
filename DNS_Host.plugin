@@ -6,108 +6,109 @@
 #!date = 2025-06-28
 
 [Host]
+#quic://dns.alidns.com:853
 # CN域名后缀
-*.cn = server:quic://dns.alidns.com:853
+*.cn = server:223.5.5.5
 
 # 阿里系
-*.alicdn.com = server:quic://dns.alidns.com:853
-*.tmall.com = server:quic://dns.alidns.com:853
-*.taobao.com = server:quic://dns.alidns.com:853
-*.aliapp.org = server:quic://dns.alidns.com:853
-*.alipay.com = server:quic://dns.alidns.com:853
-*.alipayobjects.com = server:quic://dns.alidns.com:853
-*.aliyuncs.com = server:quic://dns.alidns.com:853
-*.alibaba.com = server:quic://dns.alidns.com:853
-*.alibaba-inc.com = server:quic://dns.alidns.com:853
-*.alibabausercontent.com = server:quic://dns.alidns.com:853
-*.amap.com = server:quic://dns.alidns.com:853
-*.autonavi.com = server:quic://dns.alidns.com:853
-*.dingtalk.com = server:quic://dns.alidns.com:853
-*.elemecdn.com = server:quic://dns.alidns.com:853
-*.ele.me = server:quic://dns.alidns.com:853
-*.cainiao.com = server:quic://dns.alidns.com:853
-*.yangkeduo.com = server:quic://dns.alidns.com:853
+*.alicdn.com = server:223.5.5.5
+*.tmall.com = server:223.5.5.5
+*.taobao.com = server:223.5.5.5
+*.aliapp.org = server:223.5.5.5
+*.alipay.com = server:223.5.5.5
+*.alipayobjects.com = server:223.5.5.5
+*.aliyuncs.com = server:223.5.5.5
+*.alibaba.com = server:223.5.5.5
+*.alibaba-inc.com = server:223.5.5.5
+*.alibabausercontent.com = server:223.5.5.5
+*.amap.com = server:223.5.5.5
+*.autonavi.com = server:223.5.5.5
+*.dingtalk.com = server:223.5.5.5
+*.elemecdn.com = server:223.5.5.5
+*.ele.me = server:223.5.5.5
+*.cainiao.com = server:223.5.5.5
+*.yangkeduo.com = server:223.5.5.5
 
 # 腾讯系 ##可替换为https://doh.pub/dns-query
-*.doh.pub = server:quic://dns.alidns.com:853
-*.qq.com = server:quic://dns.alidns.com:853
-*.tencent.com = server:quic://dns.alidns.com:853
-*.weixin.com = server:quic://dns.alidns.com:853
-*.gcloudcs.com = server:quic://dns.alidns.com:853
+*.doh.pub = server:223.5.5.5
+*.qq.com = server:223.5.5.5
+*.tencent.com = server:223.5.5.5
+*.weixin.com = server:223.5.5.5
+*.gcloudcs.com = server:223.5.5.5
 
 # 抖音系
-*.amemv.com = server:quic://dns.alidns.com:853
-*.bytedance.com = server:quic://dns.alidns.com:853
-*.byteimg.com = server:quic://dns.alidns.com:853
-*.bytegecko.com = server:quic://dns.alidns.com:853
-*.bytetos.com = server:quic://dns.alidns.com:853
-*.baike.com = server:quic://dns.alidns.com:853
-*.bytednsdoc.com = server:quic://dns.alidns.com:853
-*.bytecdn.com = server:quic://dns.alidns.com:853
-*.doubao.com = server:quic://dns.alidns.com:853
-*.douyinstatic.com = server:quic://dns.alidns.com:853
-*.douyinpic.com = server:quic://dns.alidns.com:853
-*.douyinvod.com = server:quic://dns.alidns.com:853
-*.douyincdn.com = server:quic://dns.alidns.com:853
-*.ecombdapi.com = server:quic://dns.alidns.com:853
-*.ecombdpage.com = server:quic://dns.alidns.com:853
-*.idouyinvod.com = server:quic://dns.alidns.com:853
-*.ndcpp.com = server:quic://dns.alidns.com:853
-*.pstatp.com = server:quic://dns.alidns.com:853
-*.qishui.com = server:quic://dns.alidns.com:853
-*.saxysec.com = server:quic://dns.alidns.com:853
-*.snssdk.com = server:quic://dns.alidns.com:853
-*.z1cdn.com = server:quic://dns.alidns.com:853
-*.zijieapi.com = server:quic://dns.alidns.com:853
-*.zjcdn.com = server:quic://dns.alidns.com:853
+*.amemv.com = server:223.5.5.5
+*.bytedance.com = server:223.5.5.5
+*.byteimg.com = server:223.5.5.5
+*.bytegecko.com = server:223.5.5.5
+*.bytetos.com = server:223.5.5.5
+*.baike.com = server:223.5.5.5
+*.bytednsdoc.com = server:223.5.5.5
+*.bytecdn.com = server:223.5.5.5
+*.doubao.com = server:223.5.5.5
+*.douyinstatic.com = server:223.5.5.5
+*.douyinpic.com = server:223.5.5.5
+*.douyinvod.com = server:223.5.5.5
+*.douyincdn.com = server:223.5.5.5
+*.ecombdapi.com = server:223.5.5.5
+*.ecombdpage.com = server:223.5.5.5
+*.idouyinvod.com = server:223.5.5.5
+*.ndcpp.com = server:223.5.5.5
+*.pstatp.com = server:223.5.5.5
+*.qishui.com = server:223.5.5.5
+*.saxysec.com = server:223.5.5.5
+*.snssdk.com = server:223.5.5.5
+*.z1cdn.com = server:223.5.5.5
+*.zijieapi.com = server:223.5.5.5
+*.zjcdn.com = server:223.5.5.5
 
 # 苹果
-*.apple.com = server:quic://dns.alidns.com:853
-*.icloud.com = server:quic://dns.alidns.com:853
-*.icloud.com.cn = server:quic://dns.alidns.com:853
-*.cdn-apple.com = server:quic://dns.alidns.com:853
-*.mzstatic.com = server:quic://dns.alidns.com:853
+*.apple.com = server:223.5.5.5
+*.icloud.com = server:223.5.5.5
+*.icloud.com.cn = server:223.5.5.5
+*.cdn-apple.com = server:223.5.5.5
+*.mzstatic.com = server:223.5.5.5
 
 # 京东
-*.jd.com = server:quic://dns.alidns.com:853
-*.360buyimg.com = server:quic://dns.alidns.com:853
-*.jdpay.com = server:quic://dns.alidns.com:853
-*.jdcloud-oss.com = server:quic://dns.alidns.com:853
+*.jd.com = server:223.5.5.5
+*.360buyimg.com = server:223.5.5.5
+*.jdpay.com = server:223.5.5.5
+*.jdcloud-oss.com = server:223.5.5.5
 
 # 拼多多
-*.pddpic.com = server:quic://dns.alidns.com:853
-*.pinduoduo.com = server:quic://dns.alidns.com:853
+*.pddpic.com = server:223.5.5.5
+*.pinduoduo.com = server:223.5.5.5
 
 # 美团
-*.meituan.net = server:quic://dns.alidns.com:853
-*.meituan.com = server:quic://dns.alidns.com:853
-*.dianping.com = server:quic://dns.alidns.com:853
-*.tec73.com = server:quic://dns.alidns.com:853
-*.sankuai.com = server:quic://dns.alidns.com:853
+*.meituan.net = server:223.5.5.5
+*.meituan.com = server:223.5.5.5
+*.dianping.com = server:223.5.5.5
+*.tec73.com = server:223.5.5.5
+*.sankuai.com = server:223.5.5.5
 
 # 朴朴超市
-*.pupuapi.com = server:quic://dns.alidns.com:853
-*.pupumall.com = server:quic://dns.alidns.com:853
+*.pupuapi.com = server:223.5.5.5
+*.pupumall.com = server:223.5.5.5
 
 # 百度
-*.baidu.com = server:quic://dns.alidns.com:853
-*.tieba.com = server:quic://dns.alidns.com:853
+*.baidu.com = server:223.5.5.5
+*.tieba.com = server:223.5.5.5
 
 # 微博
-*.weibo.com = server:quic://dns.alidns.com:853
-*.weibocdn.com = server:quic://dns.alidns.com:853
+*.weibo.com = server:223.5.5.5
+*.weibocdn.com = server:223.5.5.5
 
 # 彩云天气
-caiyunapp.com = server:quic://dns.alidns.com:853
-*.caiyunapp.com = server:quic://dns.alidns.com:853
+caiyunapp.com = server:223.5.5.5
+*.caiyunapp.com = server:223.5.5.5
 
 # 喜马拉雅
-*.ximalaya.com = server:quic://dns.alidns.com:853
-*.xmcdn.com = server:quic://dns.alidns.com:853
+*.ximalaya.com = server:223.5.5.5
+*.xmcdn.com = server:223.5.5.5
 
 # 其他
-*.ks-cdn.com = server:quic://dns.alidns.com:853
-*.miwifi.com = server:quic://dns.alidns.com:853
-*.ninebot.com = server:quic://dns.alidns.com:853
-*.waimaimingtang.com = server:quic://dns.alidns.com:853
-*.dpfile.com = server:quic://dns.alidns.com:853
+*.ks-cdn.com = server:223.5.5.5
+*.miwifi.com = server:223.5.5.5
+*.ninebot.com = server:223.5.5.5
+*.waimaimingtang.com = server:223.5.5.5
+*.dpfile.com = server:223.5.5.5
