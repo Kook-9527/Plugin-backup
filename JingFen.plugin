@@ -11,7 +11,7 @@
 
 [Script]
 # 首页横幅
-http-response ^https:\/\/api\.m\.jd\.com\/\?functionId=union_exhibition_bff&client=apple&clientVer requires-body=1,max-size=0,script-path=jf.js
+http-response ^https:\/\/api\.m\.jd\.com\/\?functionId=union_exhibition_bff&client=apple&clientVer script-path=https://raw.githubusercontent.com/Kook-9527/Plugin-backup/refs/heads/main/JingFen.js, requires-body=true, timeout=20, tag=京粉首页横幅广告
 
 [MITM]
 hostname = api.m.jd.com
