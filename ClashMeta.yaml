@@ -8,15 +8,6 @@
 #======================================================================================
 
 
-# 自动同步时间以防止时间不准导致无法正常联网
-ntp:
-  enable: true
-  # 是否同步至系统时间，需要 root/管理员权限
-  write-to-system: false
-  server: time.apple.com
-  port: 123
-  interval: 30
-
 port: 9658           # HTTP 代理端口
 socks-port: 9547     # Socks 端口
 redir-port: 4525     # Redir 端口
