@@ -31,8 +31,6 @@ dns:
     - "*"
     - +.lan
   nameserver:        # 默认 DNS 服务
-    - quic://dns.alidns.com:853
-    - https://dns.alidns.com/dns-query#h3=true
     - 223.5.5.5
     - 119.29.29.29
   fallback:          # 国外 DNS 服务器
