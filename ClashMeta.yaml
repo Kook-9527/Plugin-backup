@@ -146,7 +146,7 @@ proxy-providers:
 #  - {"name":"Hysteria2[端口跳跃示例]","type":"hysteria2","server":"123.123.123.123","password":"MIMAmima","port":12345,"ports":"20000-30000","hop-interval":30,"down":"300","sni":"www.bing.com","skip-cert-verify":true}  
 
 # 【链式代理流量走向机制 丨 Clash本机 <-> 前置节点 <-> 落地节点 <-> Internet互联网】
-# 链式代理示例（方法1 首选）
+# 链式代理示例（方法1 首选）丨节点分组 proxies:[这里] 记得同步节点名称
   - {"name":"香港<->美国 示例","server":"123.123.123.123","port":12345,"cipher":"aes-128-gcm","password":"MIMAmima","type":"ss","dialer-proxy":"香港节点"}  
 
 # 远程订阅节点 
