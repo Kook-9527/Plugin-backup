@@ -147,7 +147,7 @@ proxy-providers:
 
 # 【链式代理流量走向机制 丨 Clash本机 <-> 前置节点 <-> 落地节点 <-> Internet互联网】
 # 链式代理示例（方法1 首选）丨节点分组 proxies:[这里] 记得同步节点名称
-  - {"name":"香港<->美国 示例","server":"123.123.123.123","port":12345,"cipher":"aes-128-gcm","password":"MIMAmima","type":"ss","dialer-proxy":"香港节点"}  
+  - {"name":"香港<->美国","server":"123.123.123.123","port":12345,"cipher":"aes-128-gcm","password":"MIMAmima","type":"ss","dialer-proxy":"香港节点"}  
 
 # 远程订阅节点 
 proxy-groups:
@@ -159,10 +159,10 @@ proxy-groups:
   - {name: 日本节点, <<: *a5, filter: "^(?=.*(日|东京|JP|(?i)Japan))(?!.*(填不想包含的节点)).*",       proxies: [], icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/JP.png"}
   - {name: 狮城节点, <<: *a5, filter: "^(?=.*(新|坡|SG|(?i)Singapore))(?!.*(填不想包含的节点)).*",     proxies: [], icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png"}
   - {name: 台湾节点, <<: *a5, filter: "^(?=.*(台|湾|TW|(?i)Taiwan))(?!.*(填不想包含的节点)).*",        proxies: [], icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/TW.png"}
-  - {name: 美国节点, <<: *a5, filter: "^(?=.*(美|US|(?i)States|American))(?!.*(填不想包含的节点)).*",  proxies: [香港<->美国 示例], icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png"}
+  - {name: 美国节点, <<: *a5, filter: "^(?=.*(美|US|(?i)States|American))(?!.*(填不想包含的节点)).*",  proxies: [香港<->美国], icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png"}
 
 # 链式代理示例（方法2）
-#  - {name: 链式代理, type: relay, proxies: ["香港节点", "美国节点"], icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Final.png"}
+#  - {name: 香港<->美国, type: relay, proxies: ["香港节点", "美国节点"], icon: "https://raw.githubusercontent.com/Orz-3/mini/master/Color/Final.png"}
 
 
 #======================================================================================
