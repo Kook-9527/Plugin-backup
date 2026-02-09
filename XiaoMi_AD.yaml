@@ -1,0 +1,21 @@
+# 小米广告及后台服务屏蔽列表
+payload:
+  - DOMAIN,ad.mi.com
+  - DOMAIN,ad.doubleclick.net
+  - DOMAIN,config.kuyun.com
+  - DOMAIN,gvod.aiseejapp.atianqi.com
+  - DOMAIN,g.dtv.cn.miaozhan.com
+  - DOMAIN,logonext.tv.kuyun.com
+  - DOMAIN,mi.com
+  - DOMAIN,t7z.cupid.ptqy.gitv.tv
+  - DOMAIN,v.admaster.com.cn
+  # 使用后缀匹配精简
+  - DOMAIN-SUFFIX,ad.xiaomi.com
+  - DOMAIN-SUFFIX,pandora.xiaomi.com
+  - DOMAIN-SUFFIX,market.xiaomi.com
+  - DOMAIN-SUFFIX,market.mi-img.com
+  - DOMAIN-SUFFIX,xmpush.xiaomi.com
+  - DOMAIN-SUFFIX,tracking.miui.com
+  - DOMAIN-SUFFIX,api.io.mi.com
+  - DOMAIN-SUFFIX,msg.xiaomi.net
+  - DOMAIN-KEYWORD,miui
