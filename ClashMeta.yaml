@@ -106,7 +106,7 @@ geox-url:                          # GeoIP2数据库链接
 # > 锚点
 #======================================================================================  
 # 主策略组 > 选择节点分组
-pr:   &a1   {type: select, proxies: [香港节点, 日本节点, 狮城节点, 台湾节点, 美国节点, 链式代理] }
+pr:   &a1   {type: select, proxies: [香港节点, 日本节点, 狮城节点, 台湾节点, 美国节点 }
 # 订阅链接 > 更新时间
 p:    &a2   {type: http, interval: 3600, health-check: {enable: true, url: http://www.apple.com/library/test/success.html, interval: 300} }
 # 负载均衡 > 轮询选择
