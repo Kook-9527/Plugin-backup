@@ -8,17 +8,20 @@
 #======================================================================================
 
 
-port: 9658           # HTTP 代理端口
-socks-port: 9547     # Socks 端口
-redir-port: 4525     # Redir 端口
-mixed-port: 3650     # 混合端口
+port: 7890           # HTTP 代理端口
+socks-port: 7891     # Socks 端口
+redir-port: 7892     # Redir 端口
+mixed-port: 7893     # 混合端口
 allow-lan: true      # 允许局域网连接
 bind-address: "*"    # 地址绑定
 mode: rule           # 规则模式
 log-level: info      # 日志级别
 ipv6: true           # IPV6开关
 udp: true
-external-controller: 127.0.0.1:9090
+
+external-controller: 0.0.0.0:9090     # WebUI地址
+external-ui: ui
+external-ui-url: 'https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip'
 
 dns:
   enable: true  # 不使用系统 DNS
@@ -26,10 +29,16 @@ dns:
   listen: 0.0.0.0:53 # dns 监听
   ipv6: true  # 开启 IPV6
   enhanced-mode: fake-ip
-  fake-ip-range: 28.0.0.1/8
+  fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
-    - "*"
-    - +.lan
+    - "blog.cloudflare.com"
+    - "developers.cloudflare.com"
+    - "hostinger.com"
+    - "ahrefs.com"
+    - "+.lan"
+    - "stun.*.*"
+
+
   nameserver:        # 默认 DNS 服务
     - quic://dns.alidns.com:853
     - https://dns.alidns.com/dns-query#h3=true
@@ -44,6 +53,8 @@ dns:
     geoip-code: CN
     ipcidr:
       - 240.0.0.0/4
+
+
 
 tun:
   enable: true      # 启用TUN模式
@@ -86,8 +97,8 @@ geo-update-interval: 24            # 更新间隔（单位：小时）
 geox-url:                          # GeoIP2数据库链接
   geoip: 'https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/geoip.dat'
   geosite: 'https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/geosite.dat'
-  mmdb: 'https://gitlab.com/Masaiki/GeoIP2-CN/-/raw/release/Country.mmdb'
-  asn: 'https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb'
+  mmdb: 'https://geodata.kelee.one/Country-Masaiki.mmdb'
+  asn: 'https://geodata.kelee.one/GeoLite2-ASN-P3TERX.mmdb'
 
 
     
@@ -148,6 +159,8 @@ proxy-providers:
 # 【链式代理流量走向机制 丨 Clash本机 <-> 前置节点 <-> 落地节点 <-> Internet互联网】
 # 链式代理示例（方法1 首选）丨节点分组 proxies:[这里] 记得同步节点名称
   - {"name":"香港<->美国","server":"123.123.123.123","port":12345,"cipher":"aes-128-gcm","password":"MIMAmima","type":"ss","dialer-proxy":"香港节点"}  
+
+# 下面策略组那里有个第2个方法
 
 # 远程订阅节点 
 proxy-groups:
